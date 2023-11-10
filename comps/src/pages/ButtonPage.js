@@ -1,11 +1,10 @@
-import Button from "./components/Button"
+import Button from "../components/Button"
 import { AiOutlineShopping } from "react-icons/ai"
 import { GoBell, GoDownload } from 'react-icons/go';
 
 
 function ButtonPage() {
     const handleClick = () => {
-        console.log('clicked')
     }
     return (
         <div>
