@@ -1,20 +1,19 @@
 import { createRandomSong } from "../data";
 
-function SongPlaylist({ songList, onAdd, onDelete }) {
-
-    const handleAddClick = (song) => {
+function SongPlaylist({ songList, onAdd, onRemove }) {
+    const handleAddSong = (song) => {
         onAdd(song)
     }
 
-    const handleRemoveClick = (song) => {
-        onDelete(song)
+    const handleRemoveSong = (song) => {
+        onRemove(song)
     }
 
     const renderedSongs = songList.map((Song) => {
         return <li key={Song}>
             {Song}
             <button
-                onClick={() => handleRemoveClick(Song)}
+                onClick={() => handleRemoveSong(Song)}
                 className="button is-danger"
             >
                 X
@@ -28,7 +27,7 @@ function SongPlaylist({ songList, onAdd, onDelete }) {
                 <h3 className="subtitle is-3">Song Playlist</h3>
                 <div className="buttons">
                     <button
-                        onClick={() => handleAddClick(createRandomSong())}
+                        onClick={() => handleAddSong(createRandomSong())}
                         className="button is-link"
                     >
                         + Add Song to Playlist
@@ -39,6 +38,5 @@ function SongPlaylist({ songList, onAdd, onDelete }) {
         </div>
     );
 }
-
 
 export default SongPlaylist

@@ -1,0 +1,5 @@
+export const ADD_MOVIE = 'add_movie'
+export const REMOVE_MOVIE = 'remove_movie'
+export const ADD_SONG = 'add_song'
+export const REMOVE_SONG = 'remove_song'
+export const RESET_LIST = 'reset_list'

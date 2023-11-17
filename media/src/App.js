@@ -15,7 +15,6 @@ function App() {
         const updatedMovieList = movieList.filter((movie) => {
             return movie !== deletedMovie
         })
-
         setMovieList(updatedMovieList)
     }
 
